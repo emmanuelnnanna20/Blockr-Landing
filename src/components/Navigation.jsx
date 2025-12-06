@@ -70,9 +70,9 @@ const Navigation = ({ currentPage, onNavigate }) => {
             </div>
           </div>
 
-          {/* Get in Touch — ALWAYS VISIBLE */}
+          {/* Get in Touch — FIXED TO USE 'contact' */}
           <button
-            onClick={() => onNavigate('home')}
+            onClick={() => onNavigate('contact')}
             className="px-5 py-2 text-sm font-semibold rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md hover:scale-105 transition-all"
           >
             Get in Touch
@@ -110,8 +110,9 @@ const Navigation = ({ currentPage, onNavigate }) => {
                   {item.name}
                 </button>
               ))}
+              {/* FIXED TO USE 'contact' */}
               <button
-                onClick={() => { onNavigate('home'); setMobileMenuOpen(false); }}
+                onClick={() => { onNavigate('contact'); setMobileMenuOpen(false); }}
                 className="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl"
               >
                 Get in Touch

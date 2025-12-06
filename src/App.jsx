@@ -7,6 +7,7 @@ import Products from './pages/products'; // renamed from products.jsx
 import Blockr from './pages/products/Blockr';
 import LockNote from './pages/products/LockNote';
 import DeadlineHeat from './pages/products/DeadlineHeat';
+import GetInTouch from './pages/GetInTouch';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -23,6 +24,8 @@ function App() {
         return <LockNote onNavigate={setCurrentPage} />;
       case 'deadlineheat':
         return <DeadlineHeat onNavigate={setCurrentPage} />;
+        case 'contact':
+           return <GetInTouch onNavigate={setCurrentPage} />;
       default:
         return <Home onNavigate={setCurrentPage} />;
     }
