@@ -49,7 +49,7 @@ const Products = ({ onNavigate }) => {
         {products.map((app, index) => (
           <div
             key={app.name}
-            className="relative overflow-hidden rounded-3xl sm:rounded-[2rem] shadow-xl bg-white hover:shadow-2xl transition-all duration-300"
+            className="relative overflow-hidden rounded-3xl sm:rounded-[0.6rem] shadow-xl bg-white hover:shadow-2xl transition-all duration-300"
           >
             {/* Banner Image */}
             <button
