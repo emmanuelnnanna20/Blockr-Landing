@@ -53,82 +53,68 @@ const GetInTouch = ({ onNavigate }) => {
       `}</style>
 
       <section className="relative min-h-screen overflow-hidden">
-        {/* Blue background — tiny edges only */}
+        {/* Blue gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600" />
 
-        {/* Wide white card */}
-        <div className="relative z-10 min-h-screen flex flex-col justify-start px-4 sm:px-6 pt-0 pb-12 sm:pt-0 sm:pb-16">
-          <div className="bg-white rounded-none sm:rounded-[40px] shadow-2xl mx-0 sm:mx-4 md:mx-8 lg:mx-12 xl:mx-20 2xl:mx-32 py-16 sm:py-16 lg:py-20 min-h-[calc(100vh-5rem)]">
+        {/* White card container - full height */}
+        <div className="relative z-10 min-h-screen flex flex-col justify-start px-2 sm:px-6 pt-16 sm:pt-4 pb-8 sm:pb-16">
+          <div className="bg-white rounded-3xl sm:rounded-[40px] shadow-2xl mx-0 sm:mx-4 md:mx-8 lg:mx-12 xl:mx-20 2xl:mx-32 py-10 sm:py-16 lg:py-20 min-h-[calc(100vh-6rem)] flex flex-col">
 
-            <div className="max-w-4xl mx-auto px-6 sm:px-12 lg:px-16 relative">
+            <div className="max-w-4xl mx-auto px-4 sm:px-12 lg:px-16 relative flex-1">
 
-              {/* Floating Cards — Decorative Elements */}
-              <div className="hidden xs:block">
-                {/* Top Left Card */}
-                <div className="absolute -left-2 top-4 sm:-left-6 sm:top-8 lg:top-12 w-32 sm:w-48 lg:w-56 bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-2xl p-2.5 sm:p-4 -rotate-6 opacity-90 sm:opacity-100">
-                  <div className="flex items-center gap-1.5 sm:gap-2">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-600 flex items-center justify-center">
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <div className="font-bold text-gray-900 text-[10px] sm:text-sm leading-tight">New Message</div>
-                      <div className="text-[8px] sm:text-xs text-gray-500">Just now</div>
-                    </div>
-                  </div>
-                </div>
+              {/* Floating Cards - Visible on all screens, positioned at corners */}
 
-                {/* Top Right Card */}
-                <div className="absolute -right-2 top-8 sm:-right-6 sm:top-16 lg:top-24 w-36 sm:w-52 lg:w-60 bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-2xl p-2.5 sm:p-4 rotate-3 opacity-90 sm:opacity-100">
-                  <div className="flex items-center gap-1.5 sm:gap-2">
-                    <div className="flex -space-x-1 sm:-space-x-2">
-                      <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-blue-600 border border-white sm:border-2 flex items-center justify-center text-white text-[8px] sm:text-xs font-bold">A</div>
-                      <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-indigo-500 border border-white sm:border-2 flex items-center justify-center text-white text-[8px] sm:text-xs font-bold">B</div>
-                      <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-purple-500 border border-white sm:border-2 flex items-center justify-center text-white text-[8px] sm:text-xs font-bold">C</div>
-                    </div>
-                    <div>
-                      <div className="font-bold text-gray-900 text-[10px] sm:text-sm leading-tight">Response 24h</div>
-                      <div className="text-[8px] sm:text-xs text-gray-500">Guaranteed</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Left Card */}
-                <div className="absolute left-2 -bottom-4 sm:left-8 sm:-bottom-6 lg:-bottom-8 w-32 sm:w-48 lg:w-52 bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-2xl p-2.5 sm:p-4 -rotate-3 opacity-90 sm:opacity-100">
-                  <div className="flex items-center gap-1.5 sm:gap-2">
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
+              {/* Top Left Card */}
+              <div className="absolute -left-1 sm:-left-4 md:-left-6 -top-6 sm:-top-2 md:top-4 w-24 sm:w-36 md:w-44 lg:w-52 bg-gray-50/95 backdrop-blur-sm rounded-xl sm:rounded-2xl md:rounded-3xl shadow-lg sm:shadow-xl md:shadow-2xl p-2 sm:p-3 md:p-4 -rotate-6 z-20">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg sm:rounded-xl bg-blue-600 flex items-center justify-center">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <div>
-                      <div className="font-bold text-gray-900 text-[10px] sm:text-sm leading-tight">Quick Reply</div>
-                      <div className="text-[8px] sm:text-xs text-gray-500">Always here</div>
-                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900 text-[8px] sm:text-[10px] md:text-xs lg:text-sm leading-tight">New Message</div>
+                    <div className="text-[6px] sm:text-[8px] md:text-[10px] lg:text-xs text-gray-500">Just now</div>
                   </div>
                 </div>
               </div>
 
-              {/* Main Content */}
-              <div className="text-center pt-12 sm:pt-8 mb-8 sm:mb-12">
-                <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-tight mb-4 sm:mb-6">
+              {/* Top Right Card */}
+              <div className="absolute -right-1 sm:-right-4 md:-right-6 -top-4 sm:top-2 md:top-8 w-28 sm:w-40 md:w-48 lg:w-56 bg-gray-50/95 backdrop-blur-sm rounded-xl sm:rounded-2xl md:rounded-3xl shadow-lg sm:shadow-xl md:shadow-2xl p-2 sm:p-3 md:p-4 rotate-3 z-20">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <div className="flex -space-x-1 sm:-space-x-1.5 md:-space-x-2">
+                    <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded-full bg-blue-600 border border-white sm:border-2 flex items-center justify-center text-white text-[6px] sm:text-[8px] md:text-xs font-bold">A</div>
+                    <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded-full bg-indigo-500 border border-white sm:border-2 flex items-center justify-center text-white text-[6px] sm:text-[8px] md:text-xs font-bold">B</div>
+                    <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded-full bg-purple-500 border border-white sm:border-2 flex items-center justify-center text-white text-[6px] sm:text-[8px] md:text-xs font-bold">C</div>
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900 text-[8px] sm:text-[10px] md:text-xs lg:text-sm leading-tight">Response 24h</div>
+                    <div className="text-[6px] sm:text-[8px] md:text-[10px] lg:text-xs text-gray-500">Guaranteed</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Main Content - Optimized for mobile */}
+              <div className="text-center pt-8 sm:pt-12 mb-6 sm:mb-10 relative z-10">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.1] mb-4 sm:mb-6">
                   Get In
                   <span className="relative inline-block ml-2 sm:ml-3">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                       Touch
                     </span>
-                    <svg className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-4 sm:h-5" viewBox="0 0 400 20" preserveAspectRatio="none">
-                      <path d="M5 15 Q 200 5 395 15" stroke="#3b82f6" strokeWidth="6" fill="none" strokeLinecap="round"/>
+                    <svg className="absolute -bottom-1 sm:-bottom-3 left-0 w-full h-3 sm:h-5" viewBox="0 0 400 20" preserveAspectRatio="none">
+                      <path d="M5 15 Q 200 5 395 15" stroke="#3b82f6" strokeWidth="6" fill="none" strokeLinecap="round" />
                     </svg>
                   </span>
                 </h1>
 
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-2 sm:px-4">
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
                   Have a question or feedback? We'd love to hear from you. Drop us a message!
                 </p>
               </div>
 
               {/* Contact Form */}
-              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6 max-w-2xl mx-auto">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 max-w-2xl mx-auto relative z-10">
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block text-sm sm:text-base font-bold text-gray-900 mb-2">
@@ -191,7 +177,7 @@ const GetInTouch = ({ onNavigate }) => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows="5"
+                    rows="4"
                     className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-gray-50 border-2 border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:border-blue-600 focus:outline-none transition resize-none text-sm sm:text-base"
                     placeholder="Tell us what's on your mind..."
                   />
@@ -201,7 +187,7 @@ const GetInTouch = ({ onNavigate }) => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-base sm:text-lg font-bold rounded-full hover:scale-105 transform transition shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+                  className="w-full px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-base sm:text-lg font-bold rounded-2xl sm:rounded-full hover:scale-105 transform transition shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -226,7 +212,7 @@ const GetInTouch = ({ onNavigate }) => {
                   <div className="p-4 bg-green-50 border-2 border-green-200 rounded-2xl">
                     <div className="flex items-center gap-3">
                       <svg className="w-6 h-6 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       <p className="text-green-800 font-semibold text-sm sm:text-base">
                         Message sent successfully! We'll get back to you soon.
@@ -239,7 +225,7 @@ const GetInTouch = ({ onNavigate }) => {
                   <div className="p-4 bg-red-50 border-2 border-red-200 rounded-2xl">
                     <div className="flex items-center gap-3">
                       <svg className="w-6 h-6 text-red-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd"/>
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                       </svg>
                       <p className="text-red-800 font-semibold text-sm sm:text-base">
                         Oops! Something went wrong. Please try again.
@@ -250,7 +236,7 @@ const GetInTouch = ({ onNavigate }) => {
               </form>
 
               {/* Contact Info */}
-              <div className="mt-10 sm:mt-12 pt-8 sm:pt-10 border-t-2 border-gray-100">
+              <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t-2 border-gray-100 relative z-10">
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm sm:text-base">
                   <div className="flex items-center gap-2 text-gray-600">
                     <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,8 +246,8 @@ const GetInTouch = ({ onNavigate }) => {
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
                     <span className="font-semibold">support@blockrlab.com</span>
                   </div>

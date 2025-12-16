@@ -7,6 +7,7 @@ const Navigation = ({ currentPage, onNavigate }) => {
 
   const navItems = [
     { name: 'Home', id: 'home' },
+    { name: 'About', id: 'about' },
     { name: 'Our Products', id: 'products' },
   ];
 
@@ -22,16 +23,12 @@ const Navigation = ({ currentPage, onNavigate }) => {
 
   return (
     <>
-      {/* Desktop Nav */}
+      {/* Desktop Nav - Always has background */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 hidden lg:block ${
-          scrolled
-            ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-100'
-            : 'bg-transparent'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 hidden lg:block bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-100"
       >
         <div className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
-          
+
           {/* Logo — always dark */}
           <button onClick={() => onNavigate('home')} className="flex items-center gap-2.5 group">
             <img
@@ -45,21 +42,19 @@ const Navigation = ({ currentPage, onNavigate }) => {
           </button>
 
           {/* Pill — ALWAYS VISIBLE (just changes slightly on scroll) */}
-          <div className={`rounded-full px-5 py-2.5 border transition-all ${
-            scrolled
-              ? 'bg-gray-100/90 border-gray-200'
-              : 'bg-white/80 backdrop-blur-md border-white/50'
-          }`}>
+          <div className={`rounded-full px-5 py-2.5 border transition-all ${scrolled
+            ? 'bg-gray-100/90 border-gray-200'
+            : 'bg-white/80 backdrop-blur-md border-white/50'
+            }`}>
             <div className="flex items-center gap-6">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
-                  className={`text-sm font-medium transition-colors ${
-                    isActive(item.id)
-                      ? 'text-blue-600 font-semibold'
-                      : 'text-gray-700 hover:text-gray-900'
-                  }`}
+                  className={`text-sm font-medium transition-colors ${isActive(item.id)
+                    ? 'text-blue-600 font-semibold'
+                    : 'text-gray-700 hover:text-gray-900'
+                    }`}
                 >
                   {item.name}
                   {isActive(item.id) && (

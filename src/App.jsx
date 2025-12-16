@@ -3,10 +3,9 @@ import { useState } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Products from './pages/products'; // renamed from products.jsx
-import Blockr from './pages/products/Blockr';
-import LockNote from './pages/products/LockNote';
-import DeadlineHeat from './pages/products/DeadlineHeat';
+import About from './pages/About';
+import Products from './pages/products';
+import ProductDetail from './pages/ProductDetail';
 import GetInTouch from './pages/GetInTouch';
 
 function App() {
@@ -16,16 +15,18 @@ function App() {
     switch (currentPage) {
       case 'home':
         return <Home onNavigate={setCurrentPage} />;
+      case 'about':
+        return <About onNavigate={setCurrentPage} />;
       case 'products':
         return <Products onNavigate={setCurrentPage} />;
       case 'blockr':
-        return <Blockr onNavigate={setCurrentPage} />;
+        return <ProductDetail productId="blockr" onNavigate={setCurrentPage} />;
       case 'locknote':
-        return <LockNote onNavigate={setCurrentPage} />;
+        return <ProductDetail productId="locknote" onNavigate={setCurrentPage} />;
       case 'deadlineheat':
-        return <DeadlineHeat onNavigate={setCurrentPage} />;
-        case 'contact':
-           return <GetInTouch onNavigate={setCurrentPage} />;
+        return <ProductDetail productId="deadlineheat" onNavigate={setCurrentPage} />;
+      case 'contact':
+        return <GetInTouch onNavigate={setCurrentPage} />;
       default:
         return <Home onNavigate={setCurrentPage} />;
     }
