@@ -20,8 +20,8 @@ Whether you're a student balancing coursework, a professional managing multiple 
 With Blockr, you can create flexible time blocks for any duration — yearly goals, monthly objectives, weekly plans, or daily tasks. Assign specific tasks to each block and watch your productivity soar as you check off completed items with visual progress tracking.
 
 Our smart reminder system ensures you never miss a beat. Get notified when blocks start, track your completion rates, build powerful streaks, and celebrate your productivity wins. The beautiful daily dashboard gives you a clear overview of your commitments each morning, while intuitive visual schedules let you see your entire day at a glance.`,
-            androidLink: "https://play.google.com/store/apps/details?id=com.blockrlabs.blockr",
-            iosLink: "#"
+            androidLink: "https://play.google.com/store/apps/details?id=com.orelithdev.blockr",
+            iosLink: null
         },
         locknote: {
             name: "LockNote",
@@ -36,8 +36,8 @@ In an age of data breaches and privacy concerns, LockNote offers a refreshing ap
 We believe in zero-knowledge security. This means we never see your data — not even we can access your passwords. There are no cloud servers to hack, no tracking, and no compromises on your privacy.
 
 LockNote features biometric unlock support for quick, secure access using your fingerprint or Face ID. The one-tap copy feature lets you copy passwords instantly without exposing them on screen. Organize your passwords by category for easy management, and rest easy knowing your digital life is protected by the strongest encryption available.`,
-            androidLink: "https://play.google.com/store/apps/details?id=com.blockrlabs.locknote",
-            iosLink: "#"
+            androidLink: "https://play.google.com/store/apps/details?id=com.orelithdev.locknoteapp",
+            iosLink: null
         },
         deadlineheat: {
             name: "Deadline Heat",
@@ -52,8 +52,8 @@ The concept is simple yet powerful: as your deadline approaches, the timer chang
 Green means you have plenty of time to plan and work steadily. Yellow signals it's time to focus and minimize distractions. Red indicates emergency mode — maximum urgency required. This intuitive color system works with your brain's natural response to visual cues, making productivity feel effortless.
 
 Track multiple projects with independent color timers, use the home screen widget to see urgency levels at a glance, and build momentum by tracking completion streaks. Deadline Heat turns the stress of deadlines into a motivating force that propels you toward success.`,
-            androidLink: "https://play.google.com/store/apps/details?id=com.blockrlabs.deadlineheat",
-            iosLink: "#"
+            androidLink: "https://play.google.com/store/apps/details?id=com.blockrlabs.deaadlineheat",
+            iosLink: null
         }
     };
 
@@ -154,15 +154,15 @@ Track multiple projects with independent color timers, use the home screen widge
                                     </svg>
                                     <span>Download for Android</span>
                                 </a>
-                                <a
-                                    href={product.iosLink}
-                                    className="px-8 py-4 bg-gray-100 text-gray-900 text-lg font-bold rounded-full hover:bg-gray-200 transition shadow-lg border-2 border-gray-200 inline-flex items-center justify-center gap-3"
+                                {/* iOS button - disabled/inactive */}
+                                <div
+                                    className="px-8 py-4 bg-gray-200 text-gray-400 text-lg font-bold rounded-full cursor-not-allowed shadow-lg border-2 border-gray-300 inline-flex items-center justify-center gap-3"
                                 >
                                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                                     </svg>
-                                    <span>Download for iOS</span>
-                                </a>
+                                    <span>iOS Coming Soon</span>
+                                </div>
                             </div>
 
                             {/* Description */}

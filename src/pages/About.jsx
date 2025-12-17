@@ -18,7 +18,7 @@ const About = ({ onNavigate }) => {
                         <div className="max-w-4xl mx-auto px-4 sm:px-12 lg:px-16">
 
                             {/* Hero Section */}
-                            <div className="text-center mb-12 sm:mb-16">
+                            <div className="text-center mb-12 sm:mb-16 mt-16 sm:mt-20">
                                 <span className="inline-block px-5 py-2 bg-blue-50 text-blue-700 rounded-full font-semibold text-sm mb-6 border border-blue-200">
                                     Our Story
                                 </span>
@@ -184,7 +184,7 @@ const About = ({ onNavigate }) => {
                                 <div className="flex justify-center gap-4 sm:gap-6">
                                     {/* Twitter/X */}
                                     <a
-                                        href="https://twitter.com/blockrlabs"
+                                        href="https://x.com/blockrlab"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-14 h-14 rounded-2xl bg-gray-900 hover:bg-gray-800 flex items-center justify-center transition-colors group"
@@ -195,7 +195,7 @@ const About = ({ onNavigate }) => {
                                     </a>
                                     {/* LinkedIn */}
                                     <a
-                                        href="https://linkedin.com/company/blockrlabs"
+                                        href="https://www.linkedin.com/company/blockrlabs/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-14 h-14 rounded-2xl bg-blue-700 hover:bg-blue-600 flex items-center justify-center transition-colors"
@@ -206,7 +206,7 @@ const About = ({ onNavigate }) => {
                                     </a>
                                     {/* Instagram */}
                                     <a
-                                        href="https://instagram.com/blockrlabs"
+                                        href="https://www.instagram.com/blockrlabs?igsh=MWQxa2w4enkwcWpweg=="
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 hover:opacity-90 flex items-center justify-center transition-opacity"
